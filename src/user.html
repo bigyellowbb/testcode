@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水库水雨情预报系统</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="nav">
+            <ul class="navlist">
+                <li class="navlist-li"><a href="#">首页</a></li>
+                <li class="navlist-li"><a href="#">预测展示</a></li>
+                <li class="navlist-li"><a href="#">历史数据</a></li>
+                <li class="navlist-li" style="box-shadow: inset 3px 3px 5px gray, inset -3px -3px 5px gray;"><a href="#">用户</a>
+                    <ul class="droplist" style="box-shadow: inset 3px 3px 5px gray, inset -3px -3px 5px gray;">
+                        <li style="box-shadow: inset 3px 3px 5px gray, inset -3px -3px 5px gray;"><a href="#">用户中心</a></li>
+                        <li style="box-shadow: inset 3px 3px 5px gray, inset -3px -3px 5px gray;"><a href="#">权限管理</a></li>
+                        <li style="box-shadow: inset 3px 3px 5px gray, inset -3px -3px 5px gray;"><a href="#" @click="quit">退出登录</a></li>
+                    </ul>
+                </li>
+                <li class="navlist-li"><a href="">帮助</a>
+    
+                </li>
+            </ul>
+        </div>
+        <br>
+        <br>
+        <br>
+    
+        <div class="main">
+
+            <div class="user-info">用户信息</div>
+            <div class="introduce">{{introducetext}}</div>
+    
+        </div>
+    </div>
+
+    <script type="module">
+        import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+        
+        createApp({
+            data(){
+                return{
+                    introducetext: "https://www.bilibili.com",
+                }
+            },
+
+            methods:{
+                quit: function(){
+                    alert('成功退出！')
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
